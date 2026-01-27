@@ -1,30 +1,31 @@
-# Mobile Device Programming – Java  
+# Software Architecture and Design – Java
 
-This repository contains a **collection of exercises and laboratory assignments** for the **Mobile Device Programming** course, using the **Java** programming language.
+This repository contains a **collection of exercises, laboratory assignments, and design pattern implementations** for the **Software Architecture and Design** course, developed using the **Java** programming language.
 
-The content is designed to help students strengthen both basic and advanced Java programming knowledge, with a particular focus on programming mindset, object-oriented programming (OOP), and fundamental problem-solving skills that support mobile application development.
+The content focuses on building a strong **object-oriented programming (OOP) mindset**, understanding **software architecture principles**, and applying **design patterns** to create maintainable and scalable software systems.
 
 ---
 
 ## Course Information
 
-- **Course Name:** Mobile Device Programming  
+- **Course Name:** Software Architecture and Design  
 - **Programming Language:** Java  
-- **Instructor:** ThS. Mai Cuong Tho  
+- **Instructor:** ThS. Huỳnh Tuấn Anh  
 
 ---
 
 ## Repository Contents
 
-The repository includes:
+This repository includes:
 
-- Basic Java programming exercises  
+- Core Java programming exercises  
 - Object-Oriented Programming (OOP) practice  
-- Mathematical and logical problem-solving exercises  
-- Console-based practice programs  
-- Laboratory assignments to familiarize students with mobile application development concepts  
+- UML-based design implementations  
+- Design Pattern examples (e.g. Singleton, Builder, Prototype, etc.)  
+- Refactoring and code structure improvement exercises  
+- Laboratory assignments related to software architecture and design  
 
-All exercises are implemented clearly and follow standard Java coding conventions.
+All source code follows standard Java coding conventions and emphasizes **readability, reusability, and maintainability**.
 
 ---
 
@@ -32,15 +33,26 @@ All exercises are implemented clearly and follow standard Java coding convention
 
 Through these exercises and lab assignments, students will be able to:
 
-- Master Java syntax and core programming concepts  
-- Understand and apply object-oriented programming principles  
-- Improve input/output handling skills  
-- Develop logical thinking and problem-solving abilities  
-- Build a solid foundation for mobile application development  
+- Understand the role of software architecture in system design  
+- Apply object-oriented design principles (SOLID)  
+- Identify and implement common design patterns  
+- Translate UML diagrams into Java source code  
+- Improve software design quality and coding structure  
+- Build a solid foundation for developing scalable software systems  
 
 ---
 
 ## Tools and Technologies
 
 - **Java (JDK 8 or higher)**  
-- Recommended IDEs: IntelliJ IDEA / Eclipse / VS Code  
+- Recommended IDEs:
+  - IntelliJ IDEA  
+  - Eclipse  
+  - Visual Studio Code  
+
+---
+
+## Notes
+
+This repository is intended for **educational purposes**, supporting coursework and self-study in software architecture and design.  
+Each exercise is implemented incrementally to demonstrate both **design thinking** and **practical coding skills**.
