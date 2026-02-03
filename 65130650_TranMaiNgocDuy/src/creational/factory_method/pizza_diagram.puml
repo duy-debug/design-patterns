@@ -1,0 +1,33 @@
+    @startuml
+    'https://plantuml.com/class-diagram
+    abstract class PizzaStore {
+        + {abstract} createPizza(type: PizzaType): Pizza
+        + orderPizza(type: PizzaType): Pizza
+    }
+    class VietNamPizzaStore {
+        + createPizza(type: PizzaType): Pizza
+    }
+    abstract class Pizza {
+        - builder: StringBuilder
+        + {abstract} prepare(): void
+        + {abstract} bake(): void
+        + {abstract} cut(): void
+        + {abstract} box(): void
+    }
+    class PizzaHaiSan {
+        + prepare(): void
+        + bake(): void
+        + cut(): void
+        + box(): void
+    }
+    enum PizzaType {
+        HAISAN
+        BO
+        PHOMAI
+    }
+    PizzaStore --> Pizza : creates
+    VietNamPizzaStore --> PizzaHaiSan : instantiates
+    PizzaStore --> PizzaType : parameter
+    PizzaStore <|-- VietNamPizzaStore
+    Pizza <|-- PizzaHaiSan
+    @enduml
