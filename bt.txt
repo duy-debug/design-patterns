@@ -1,0 +1,3 @@
+Sử dung mẫu Composite Pattern để biểu diễn cây nhị phân
+Duyệt cây theo thứ tự NRL
+Mỗi nút biểu diễn dữ lieu là một số nguyên

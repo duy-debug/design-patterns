@@ -1,0 +1,20 @@
+@startuml
+abstract class Node {
+    int value;
+
+    + void addLeftNode(Nut nut)
+    + void addRightNode(Nut nut)
+    + void removeLeftNode()
+    + void removeRightNode()
+    + void browseNode()
+}
+
+class NodeLa
+class NodeTrong
+
+Node <|-- NodeLa
+Node <|-- NodeTrong
+
+NodeTrong *--> Node:left
+NodeTrong *--> Node:rightt
+@enduml
