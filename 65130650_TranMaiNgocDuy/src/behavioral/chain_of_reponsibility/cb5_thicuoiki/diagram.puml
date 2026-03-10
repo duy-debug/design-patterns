@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class XepLoaiHS{
+ String ten
+ float nguongMax
+ float nguongMin
+ +{abstract} void XepLoai(float diem)
+ +{abstract} XepLoaiHS loaiTren(XepLoaiHS loaiTren)
+}
+
+class XuatSac
+class XepLoai
+XepLoaiHS <|-- XuatSac
+XepLoaiHS <|-- XepLoai
+XepLoai --> XepLoaiHS: loaiTren
+
+
+@enduml
