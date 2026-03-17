@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class RemoteControl{
++ RemoteControl()
++ void setState(IRemoteState state)
++ void powerPress()
+}
+class OnState{
++ void handle(IRemoteControl remote)
+}
+class OffState
+interface IRemoteState{
++ void handle(IRemoteControl remote)
+}
+
+OnState ..|> IRemoteState
+OffState ..|> IRemoteState
+RemoteControl --> IRemoteState: state
+
+@enduml
