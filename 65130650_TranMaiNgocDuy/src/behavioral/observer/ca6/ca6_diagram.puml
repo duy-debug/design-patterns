@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class PlayerData{
+    String thoiGian
+    int countDown
+    float grade
+    + void attach(IPlayerListerner listener)
+    + void setThoiGian();
+    + void setCountDown();
+    + void setGrade();
+}
+interface IPlayerListener{
+    + void listen(PlayerData)
+}
+class Dashboard{
+
+}
+
+PlayerData --> IPlayerListener: listener
+Dashboard ..|> IPlayerListener
+Dashboard --> PlayerData: a
+note right of PlayerData
+Các setter là các notify
+Ví dụ: là setThoiGian(String thoiGian)
+this.thoiGian = thoiGian
+nếu listener khác null:
+listener.listen(this)
+
+end note
+@enduml
