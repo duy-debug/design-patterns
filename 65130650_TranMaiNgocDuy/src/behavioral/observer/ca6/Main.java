@@ -5,9 +5,11 @@ public class Main {
     PlayerData playerData = new PlayerData("4",5,6);
     Dashboard dashboard = new Dashboard(playerData);
     dashboard.listen(playerData);
+
     playerData.setThoiGian("10");
-    playerData.setCountDown(10);
-    playerData.setGrade(10);
+    playerData.setCountDown(10); // thay đổi số
+    playerData.setGrade(10); // thay đổi điểm
+
     dashboard.listen(playerData);
   }
 }
