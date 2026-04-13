@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+class SanPhamDuy{
+- String maSanPham
+- String tenSanPham
+- int soLuong
+- double donGia
+}
+class SingletonDuy{
+- SingletonDuy instance
+- ArrayList<SanPhamDuy> sp
+- SingletonDuy()
++ SingletonDuy getInstance()
++ void them(SanPhamDuy s)
++ void in()
+}
+class UI
+SingletonDuy *--> SanPhamDuy
+UI --> SingletonDuy
+@enduml

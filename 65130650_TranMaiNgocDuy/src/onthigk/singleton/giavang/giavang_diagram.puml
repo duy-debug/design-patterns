@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/class-diagram
+class BienDongVangDuy{
+- String ngay
+- String loaiVang
+- double giaMua
+- double giaBan
+}
+class SingletonDuy{
+- SingletonDuy instance
+- ArrayList<BienDongVangDuy> sp
+- SingletonDuy()
++ SingletonDuy getInstance()
++ void them(BienDongVangDuy v)
++ void xem(String ngay)
++ void in()
+}
+class UI
+SingletonDuy *--> BienDongVangDuy
+UI --> SingletonDuy
+@enduml

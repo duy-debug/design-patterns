@@ -13,7 +13,7 @@ class Builder{
 class HoaDonHeader{}
 class CTHD{}
 Builder ..> HoaDon
-HoaDon --> HoaDonHeader: header
+HoaDon *--> HoaDonHeader: header
 HoaDon *--> CTHD: cthds
 Builder --> HoaDonHeader: header
 Builder *--> CTHD: cthds

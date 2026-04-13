@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Sach{
+- String tuaDe
+- int soTrang
+- String tacGia
+- ArrayList<String> dsChuong
+- Sach(Builder b)
++ String toString()
+}
+class Builder{
+- String tuaDe
+- int soTrang
+- String tacGia
+- ArrayList<String> dsChuong
++ Builder setTuaDe(String tuaDe)
++ Builder setSoTrang(int soTrang)
++ Builder setTacGia()
++ Builder setTuaDe(String tuaDe)
++ Sach build()
+}
+Builder ..> Sach
+
+@enduml
