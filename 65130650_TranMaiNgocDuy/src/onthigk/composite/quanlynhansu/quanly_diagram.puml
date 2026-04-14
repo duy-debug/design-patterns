@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class ThanhVienDuy{
+-String hoTen
+-String soDienThoai
+-String email
++ {abstract} String getStringTree()
++ {abstract} void addItem(ThanhVienDuy thanhVienDuy)
++ {abstract} void remove(ThanhVienDuy thanhVienDuy))
+}
+class NhanVien
+class PhongBan
+NhanVien --|> ThanhVienDuy
+PhongBan --|> ThanhVienDuy
+PhongBan *--> ThanhVienDuy: thanhVien
+@enduml

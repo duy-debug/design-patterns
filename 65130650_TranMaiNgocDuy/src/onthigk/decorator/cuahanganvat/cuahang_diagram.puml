@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface IProduct{
++ getCost(): double
++ getDescription(): String
+}
+abstract class ProductDecorator{
++ getCost(): double
++ getDescription(): String
+}
+class BasicProduct{
+- String name
+- double cost
+- String description
++ getCost(): double
++ getDescription(): String
+}
+class Sauce
+class Topping
+class SpecialPackaging
+IProduct <|.. BasicProduct
+IProduct <|.. ProductDecorator: products
+ProductDecorator --> IProduct
+ProductDecorator<|--Topping
+ProductDecorator<|--Sauce
+ProductDecorator<|--Discount
+ProductDecorator<|--SpecialPackaging
+@enduml

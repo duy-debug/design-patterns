@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+class BuilderDuy{
+-String tieuDe
+-String noiDung
+-String bieuTuong
+-String amThanh
+-String doUuTien
+-String nutHanhDong
++ BuilderDuy buildTieuDe(String tieuDe)
++ BuilderDuy buildNoiDung(String noiDung)
++ BuilderDuy buildBieuTuong(String bieuTuong)
++ BuilderDuy buildAmThanh(String amThanh)
++ BuilderDuy buildDoUuTien(String doUuTien)
++ BuilderDuy buildNutThanhCong(String nutThanhCong)
++ Notification build()
+}
+class Notification{
+-String tieuDe
+-String noiDung
+-String bieuTuong
+-String amThanh
+-String doUuTien
+-String nutHanhDong
+-Notification(BuilderDuy b)
+}
+BuilderDuy ..> Notification
+@enduml

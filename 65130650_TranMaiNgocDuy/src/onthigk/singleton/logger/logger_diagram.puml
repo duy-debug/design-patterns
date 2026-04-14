@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+class LoggerDuy{
+- {static} Logger instance
+- Logger()
++ {static} logger getInstance()
++ void writeLog(logItem log)
++ void viewLog()
+}
+class ProgramDuy{
+- String id;
++ writeLog(String noiDung, String thoiGian)
+}
+class LogItem{
+- String noiDung, tg, proId
+}
+LoggerDuy o--> LogItem: logItem
+ProgramDuy ..> LoggerDuy
+@enduml
