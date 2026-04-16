@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface ISoSanh{
++ int soSanh(T o1, T o2)
+}
+class QLSV{
++ sapXep(): void
++ inDS(): void
+}
+class SinhVien{
+- String hoTen
+- String ngaySinh
+- double diemTB
+}
+class SoSanhTheoTen
+class SoSanhTheoDiem
+SoSanhTheoDiem ..|> ISoSanh
+SoSanhTheoTen ..|> ISoSanh
+SoSanhTheoTen ..|> SinhVien
+SoSanhTheoDiem ..|> SinhVien
+QLSV --> ISoSanh
+QLSV --> SinhVien: dsSV
+@enduml

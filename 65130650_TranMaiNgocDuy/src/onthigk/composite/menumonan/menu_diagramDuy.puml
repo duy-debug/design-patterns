@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Menu{
+- String tenMenu
++{abstract} String thongTin()
++{abstract} void them(Menu menu)
++{abstract} double tinhTong(Menu menu)
+}
+class MonAn{
+- String tenMonAn
+- double gia
+}
+class Combo
+MonAn --|> Menu
+Combo --|> Menu
+Combo *--> Menu: ds
+
+@enduml

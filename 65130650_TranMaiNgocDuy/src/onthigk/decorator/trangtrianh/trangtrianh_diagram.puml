@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class TrangTriAnh{
++ String description
++ {abstract}void hienThiAnh()
++ String getDescription()
+
+}
+class XemAnh{
+  + void hienThiAnh()
+}
+abstract class Decorator{
+  - TrangTriAnh trangTriAnh
+  + Decorator(TrangTriAnh trangTriAnh)
+  + void hienThiAnh()
+}
+class BorderDecorator{
+  + BorderDecorator(TrangTriAnh trangTriAnh)
+  + void hienThiAnh()
+}
+class WatermarkDecorator{
+  + WatermarkDecorator(TrangTriAnh trangTriAnh)
+  + void hienThiAnh()
+}
+
+class FilterDecorator{
+  + FilterDecorator(TrangTriAnh trangTriAnh)
+  + void hienThiAnh()
+}
+XemAnh --|> TrangTriAnh
+Decorator --|>TrangTriAnh
+Decorator -->TrangTriAnh: trangTriAnh
+BorderDecorator --|> Decorator
+WatermarkDecorator --|> Decorator
+FilterDecorator --|> Decorator
+@enduml

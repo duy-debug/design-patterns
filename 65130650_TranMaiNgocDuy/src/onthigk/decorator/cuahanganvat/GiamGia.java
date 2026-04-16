@@ -1,19 +1,19 @@
 package onthigk.decorator.cuahanganvat;
 
-public class Topping extends DonHangDecorator{
-  public Topping(AVKC donHang) {
+public class GiamGia extends DonHangDecorator{
+  public GiamGia(AVKC donHang) {
     super(donHang);
   }
 
   @Override
   float TinhTong() {
-    return super.TinhTong() + 5;
+    return super.TinhTong() - 3;
   }
 
   @Override
   void hienThi() {
     super.hienThi();
-    System.out.println("Them Topping");
+    System.out.println("Giam Gia");
     System.out.println("Tong don hang: "+TinhTong());
   }
 }

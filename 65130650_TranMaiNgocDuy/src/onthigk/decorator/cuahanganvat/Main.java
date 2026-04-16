@@ -1,19 +1,16 @@
 package onthigk.decorator.cuahanganvat;
 
+import java.util.ArrayList;
+
 public class Main {
   public static void main(String[] args) {
-    // Chọn món cơ baản
-    IProduct myOrder = new BasicProduct("Trà sữa", 5000,"Vị dâu");
-    System.out.println(myOrder.toString());
-    // Thêm tùy chọn
-    myOrder = new Topping(myOrder);
-    System.out.println(myOrder.getDescription());
-    myOrder = new SpecialPackaging(myOrder);
-    System.out.println(myOrder.getDescription());
-    myOrder = new Sauce(myOrder);
-    System.out.println(myOrder.getDescription());
-    myOrder = new Discount(myOrder,10); // giảm giá 10%
-    System.out.println(myOrder.getDescription());
-    System.out.println("Tổng tiền " +myOrder.getCost() +" VNĐ");
+    ArrayList<SanPham> sp1 = new ArrayList<>();
+    sp1.add(new SanPham("Banh", 25,"Sieu Ngon"));
+    sp1.add(new SanPham("Banh trang", 30,"Sieu Gion"));
+    AVKC d1 = new DonHang(sp1);
+    d1 = new DongGoi(d1);
+    d1 = new Topping(d1);
+    d1 = new GiamGia(d1);
+    d1.hienThi();
   }
 }

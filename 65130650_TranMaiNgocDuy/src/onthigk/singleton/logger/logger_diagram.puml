@@ -1,9 +1,9 @@
 @startuml
 'https://plantuml.com/class-diagram
 class LoggerDuy{
-- {static} Logger instance
+- {static} LoggerDuy instance
 - Logger()
-+ {static} logger getInstance()
++ {static} LoggerDuy getInstance()
 + void writeLog(logItem log)
 + void viewLog()
 }

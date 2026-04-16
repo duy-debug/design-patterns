@@ -7,10 +7,10 @@ class SanPhamDuy{
 - double donGia
 }
 class SingletonDuy{
-- SingletonDuy instance
+- {static}SingletonDuy instance
 - ArrayList<SanPhamDuy> sp
 - SingletonDuy()
-+ SingletonDuy getInstance()
++ {static}SingletonDuy getInstance()
 + void them(SanPhamDuy s)
 + void in()
 }

@@ -7,10 +7,10 @@ class BienDongVangDuy{
 - double giaBan
 }
 class SingletonDuy{
-- SingletonDuy instance
+- {static}SingletonDuy instance
 - ArrayList<BienDongVangDuy> sp
 - SingletonDuy()
-+ SingletonDuy getInstance()
++ {static}SingletonDuy getInstance()
 + void them(BienDongVangDuy v)
 + void xem(String ngay)
 + void in()

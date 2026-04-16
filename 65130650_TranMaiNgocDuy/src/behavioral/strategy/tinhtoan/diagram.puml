@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface ITinh
+class Context
+class Cong
+class Tru
+class Nhan
+class Chia
+Chia ..|> ITinh
+Cong ..|> ITinh
+Tru ..|> ITinh
+Nhan ..|> ITinh
+Context --> ITinh
+
+
+@enduml

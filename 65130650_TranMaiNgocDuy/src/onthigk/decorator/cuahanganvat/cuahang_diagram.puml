@@ -1,28 +1,36 @@
 @startuml
-'https://plantuml.com/class-diagram
-interface IProduct{
-+ getCost(): double
-+ getDescription(): String
+abstract class AVKC{
+    {abstract} float TinhTong()
+    {abstract} void hienThi()
 }
-abstract class ProductDecorator{
-+ getCost(): double
-+ getDescription(): String
+class SanPham{
+    String tenSP
+    int giaTien
+    String moTa
 }
-class BasicProduct{
-- String name
-- double cost
-- String description
-+ getCost(): double
-+ getDescription(): String
+class DonHang{
+
 }
-class Sauce
-class Topping
-class SpecialPackaging
-IProduct <|.. BasicProduct
-IProduct <|.. ProductDecorator: products
-ProductDecorator --> IProduct
-ProductDecorator<|--Topping
-ProductDecorator<|--Sauce
-ProductDecorator<|--Discount
-ProductDecorator<|--SpecialPackaging
+abstract class DonHangDecorator{
+
+}
+class Sot{
+
+}
+class DongGoi{
+
+}
+class GiamGia{
+
+}
+
+AVKC <|-- DonHang
+AVKC <|-- DonHangDecorator
+DonHangDecorator --> AVKC:donHang
+SanPham <--* DonHang: sps
+DonHangDecorator <|-- Topping
+DonHangDecorator <|-- Sot
+DonHangDecorator <|-- DongGoi
+DonHangDecorator <|-- GiamGia
+
 @enduml
