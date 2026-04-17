@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class DecoratorDuy{
+- DangKyGoiCuoc dangKy
++ DecoratorDuy(DangKyGoiCuoc dangKy)
+}
+class GoiCuoc{
+- String tenGoi
+- double giaCuoc
+}
+class GoiMang
+class DangKy4G
+class NhacCho
+class ChuyenVung
+interface DangKyGoiCuoc{
++ double tingTong()
++ String getDescription()
+}
+DecoratorDuy --|> DangKyGoiCuoc
+DecoratorDuy --> DangKyGoiCuoc: dangKy
+GoiCuoc --|> DangKyGoiCuoc
+GoiMang --|> DecoratorDuy
+NhacCho --|> DecoratorDuy
+DangKy4G --|> DecoratorDuy
+ChuyenVung --|> DecoratorDuy
+
+@enduml
